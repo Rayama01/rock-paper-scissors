@@ -19,6 +19,25 @@
             return "scissors"
         }
     }
+
+
+    function playRound(playerSelection, computerSelection) {
+            if (playerSelection == computerSelection) {
+                return `Its a tie :P`
+            }else if (playerSelection == "rock" && computerSelection == "scissors") {
+                return `You win :D Rock beats scissors.`
+            }else if (playerSelection == "scissors" && computerSelection == "rock") {
+                return `You lose :( rock destroys scissors!`
+            }else if (playerSelection == "paper" && computerSelection == "rock") {
+                return `You win :D paper covers rock!`
+            }else if (playerSelection == "rock" && computerSelection == "paper") {
+                return `You lose :( paper covers rock.`
+            }else if (playerSelection == "scissors" && computerSelection == "paper") {
+              return `You win :D scissors cuts paper!`
+            }else if (playerSelection == "paper" && computerSelection == "scissors") {
+              return `You lose :( scissors cuts paper!`
+            }
+        }
     </script>
 </body>
 </html>
