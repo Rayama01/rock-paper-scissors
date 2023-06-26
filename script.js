@@ -46,23 +46,23 @@ function updateResults(result) {
   
   if(playerScore >= 5 && computerScore < 5) {
     resultsDiv.textContent = `You're the winner! Final Score: ${playerScore} to ${computerScore}`;
-    document.querySelector("#rock-btn").style.visibility='hidden';
-    document.querySelector("#paper-btn").style.visibility='hidden';
-    document.querySelector("#scissors-btn").style.visibility='hidden';
+    document.querySelector("#rock-btn").disabled = true;
+    document.querySelector("#paper-btn").disabled = true;
+    document.querySelector("#scissors-btn").disabled = true;
     document.querySelector("#reset-btn").style.visibility='visible';
     return;
   }else if(computerScore >= 5 && playerScore < 5) {
     resultsDiv.textContent = `You're the loser. Final Score: ${playerScore} to ${computerScore}`;
-    document.querySelector("#rock-btn").style.visibility='hidden';
-    document.querySelector("#paper-btn").style.visibility='hidden';
-    document.querySelector("#scissors-btn").style.visibility='hidden';
+    document.querySelector("#rock-btn").disabled = true;
+    document.querySelector("#paper-btn").disabled = true;
+    document.querySelector("#scissors-btn").disabled = true;
     document.querySelector("#reset-btn").style.visibility='visible';
     return;
-  }else if(playerScore == compScore){
+  }else if(playerScore == 5 && computerScore == 5){
     resultsDiv.textContent = `You tied. Final Score: ${playerScore} to ${computerScore}`;
-    document.querySelector("#rock-btn").style.visibility='hidden';
-    document.querySelector("#paper-btn").style.visibility='hidden';
-    document.querySelector("#scissors-btn").style.visibility='hidden';
+    document.querySelector("#rock-btn").disabled = true;
+    document.querySelector("#paper-btn").disabled = true;
+    document.querySelector("#scissors-btn").disabled = true;
     document.querySelector("#reset-btn").style.visibility='visible';
     return;
   }
